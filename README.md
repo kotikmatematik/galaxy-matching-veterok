@@ -1,6 +1,6 @@
 # galaxy-matching-veterok
 
-`galaxy-matching-veterok` is the project behind GalaxyMatchBot, a Telegram bot that turns a portrait photo into a shareable space-object card. It compares the input image with a curated set of real galaxies, nebulae, planets, and other objects using CLIP image embeddings, then renders a bilingual result card.
+`galaxy-matching-veterok` is the project behind @GalaxyMatchBot, a Telegram bot that turns a portrait photo into a shareable space-object card. It compares the input image with a curated set of real galaxies, nebulae, planets, and other objects using CLIP image embeddings, then renders a bilingual result card.
 
 The project started as a notebook prototype and is now organized as a small deployable Python service.
 
