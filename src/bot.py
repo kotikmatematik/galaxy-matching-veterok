@@ -46,14 +46,20 @@ LANG_BY_TEXT = {
     'en': 'en',
 }
 
-WELCOME_TEXT = (
-    '✨ Привет! Это GalaxyMatchBot: научный космический оракул.\n\n'
-    'Отправь свое фото, я сравню изображение с настоящими галактиками, туманностями, планетами и другими объектами космоса. '
-    'В ответ ты получишь карточку с объектом, который ближе всего по визуальному сходству.\n\n'
-    '✨ Hi! This is GalaxyMatchBot: a scientific cosmic oracle.\n\n'
-    'Send a portrait photo, and I will compare the image with real galaxies, nebulae, planets, and other space objects. '
-    'You will get a card with the object that is closest by visual similarity.\n\n'
-    '👇 First, choose the card language:'
+WELCOME_TEXT = '👇 Выбери язык / Choose language:'
+
+INTRO_RU = (
+    '✨ Это GalaxyMatchBot: научный космический оракул.\n\n'
+    'Отправь своё фото, я сравню его с настоящими галактиками, туманностями, планетами и другими объектами космоса '
+    'и верну карточку с объектом, который ближе всего по визуальному сходству.\n\n'
+    'Пришли фото!'
+)
+
+INTRO_EN = (
+    '✨ This is GalaxyMatchBot: a scientific cosmic oracle.\n\n'
+    'Send me a photo and I will compare it with real galaxies, nebulae, planets, and other space objects, '
+    'then return a card with the closest match.\n\n'
+    'Send your photo!'
 )
 
 ABOUT_MODEL_RU = (
@@ -149,9 +155,9 @@ def build_router(matcher: SpaceObjectMatcher):
         log_user_event(message, 'language_selected', language=lang, button=message.text)
         await state.set_state(UserFlow.waiting_for_photo)
         if lang == 'en':
-            await message.answer('Send me a portrait photo and I will return your space-object card.', reply_markup=ReplyKeyboardRemove())
+            await message.answer(INTRO_EN, reply_markup=ReplyKeyboardRemove())
         else:
-            await message.answer('Пришли фото человека, а я верну карточку с космическим объектом.', reply_markup=ReplyKeyboardRemove())
+            await message.answer(INTRO_RU, reply_markup=ReplyKeyboardRemove())
 
     @router.message(UserFlow.waiting_for_photo, F.photo)
     async def handle_photo(message: Message, state: FSMContext, bot: Bot):
