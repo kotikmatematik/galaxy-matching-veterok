@@ -21,7 +21,13 @@ The project started as a notebook prototype and is now organized as a small depl
 2. Bot shows a short intro and language buttons.
 3. User selects `Русский` or `English`.
 4. User sends a portrait photo.
-5. Bot returns a generated JPG card.
+5. Bot returns a generated JPG card, followed by an invite to print it on the camp mini-printer (with a Leave-No-Trace note) and pointers to `/schedule` and `/about_model`.
+
+## Commands
+
+- `/start` — Begin the flow and choose a language.
+- `/schedule` — Show the camp programme in the user's chosen language (content lives in editable `.txt` files, updated without a restart).
+- `/about_model` — Brief explanation of how the CLIP model works, GitHub link, and author credit (@elder_flower).
 
 ## Project Structure
 

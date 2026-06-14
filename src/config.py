@@ -10,6 +10,9 @@ CARDS_DIR = DATA_DIR / 'cards'
 TMP_DIR = ROOT_DIR / 'tmp'
 ANALYTICS_PATH = DATA_DIR / 'bot_events.csv'
 
+SCHEDULE_RU_PATH = DATA_DIR / 'schedule_ru.txt'
+SCHEDULE_EN_PATH = DATA_DIR / 'schedule_en.txt'
+
 MODEL_NAME = 'clip-ViT-B-32'
 DEFAULT_CANDIDATE_K = 5
 DEFAULT_SELECTION = 'deterministic_sample'

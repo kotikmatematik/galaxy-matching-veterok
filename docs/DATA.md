@@ -8,6 +8,8 @@ Required files:
 - `space_object_embeddings.npy` - precomputed CLIP image embeddings for objects.
 - `space_object_person_bias.npy` - calibration bias used to reduce generic face-photo matches.
 - `images/` - local object images referenced by the CSV.
+- `schedule_ru.txt` - editable Russian-language camp schedule served by `/schedule` (re-read on every call, no restart needed).
+- `schedule_en.txt` - same schedule in English.
 
 The CSV expects these columns:
 
