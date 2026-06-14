@@ -197,15 +197,15 @@ def build_router(matcher: SpaceObjectMatcher):
             filename = 'space_card.jpg' if lang == 'en' else 'kosmicheskaya_kartochka.jpg'
             if lang == 'en':
                 caption = (
-                    '🖨 You can print this card on the camp mini-printer, '
-                    'just ask any camp participant and they\'ll help you!\n\n'
+                    '🖨 You can print this card at the Observatory camp on the mini-printer, '
+                    'just ask any participant and they\'ll help you!\n\n'
                     'Just keep in mind that the printer uses thermal receipt paper, which is not quite LNT. If you print it, please take it with you and don\'t leave it in nature 🌿\n\n'
                     'By the way, there is so much more happening at the camp! Check out all the activities in /schedule, and if you\'re curious how the bot works: /about_model.'
                 )
             else:
                 caption = (
-                    '🖨 Эту карточку можно распечатать на мини-принтере, '
-                    'подойди к любому участнику кемпа и они помогут!\n\n'
+                    '🖨 Эту карточку можно распечатать в кемпе Обсерватория на мини-принтере, '
+                    'подойди к любому участнику и они помогут!\n\n'
                     'Только имей в виду, что принтер печатает на чековой термобумаге, что не совсем LNT. Если распечатаешь, пожалуйста, забери с собой и не оставляй на природе 🌿\n\n'
                     'Кстати, у нас в кемпе ещё очень много интересного! Все активности смотри в /schedule, а если хочешь узнать как работает бот: /about_model.'
                 )
